@@ -1,0 +1,9 @@
+project: savantenvs/qpdf
+target: dct_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/dct_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/build/mayhem-out/dct_fuzzer
+    libfuzzer: true
+    timeout: 30

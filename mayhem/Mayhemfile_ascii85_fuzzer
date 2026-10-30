@@ -1,0 +1,9 @@
+project: savantenvs/qpdf
+target: ascii85_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ascii85_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/build/mayhem-out/ascii85_fuzzer
+    libfuzzer: true
+    timeout: 30
